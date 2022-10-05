@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input[type=text]{
+  margin: 10px 5px;
+  outline: none;
+  width: 300px;
+  font-size: 1.2em;
+  height:50px;
+  padding: 5px;
+ 	border-radius: 10px;
+	border: 1px solid rgba(229, 83, 0);
+
+}
+
+
+input[type=text]:focus {
+  border-radius: 10px;
+  border: 2px solid rgba(229, 83, 0);
+}
+
+#searchSwitch, #showSwitch{
+  border: 1px solid rgba(229, 83, 0);
+  height: 50px;
+  min-width: 50px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.wrapper {
+position:relative;
+  max-width: 90%;
+ /* max-width: 1000px;*/
+  min-width: 600px;
+  min-height: 90vh;
+  margin: auto;
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+header {
+  position: relative;
+	margin-bottom: 20px;
+}
+
+img {
+  height: 100px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+h1 {
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  display: inline-block;
+  color: white;
+  background: black;
+  font-size: 2em;
+  padding: 10px 20px;
+  white-space: nowrap;
+
+
+}
+
+#appDiv {
+  display: flex;  
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.modalWrap {
+  display: none;  
+}
+
+.modalWrap.active {
+  	display: block;
+  	position: fixed;
+	z-index: 10;
+  	top: 0;
+  	left: 0;
+	/*bottom:0;*/
+  	width: 100%;
+	overflow: auto;
+  	height: 100%;
+  	background-color: rgba(0, 0, 0, .8);
+}
+
+.modal {
+  position: absolute;
+  border: 2px solid rgba(229, 83, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  
+	min-height: 500px;
+  /*max-height: 100%;  */
+  background-color: white;
+}
+
+.topModal {
+  border-bottom: 2px solid rgba(229, 83, 0);
+  padding: 5px; 
+  color: white;
+  background-color: rgba(140, 184, 17);;
+  position: relative;
+}
+
+#modalDiv {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;   
+}
+
+span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-family: arial;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgba(229, 83, 0);
+}
+
+#appDiv button, .modal button {
+  padding: 10px;
+  height: 80px;
+  font-size: 1.2em;
+  border: 2px solid rgba(229, 83, 0);
+  background-color: rgba(140, 184, 17);
+  margin: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  
+}
+
+#appDiv button {
+  min-width: 180px;
+  display: none;
+}
+
+.sizeValueBtn, .sizeIdBtn, .sizeIdTarget{
+  height: 80px;
+  min-width: 80px;
+  font-size: 1.3em;
+}
+
+.sizeIdTarget{  
+  cursor: default; 
+}
+
+button.sizeValueTargetBtn{  
+  font-size: 2em;
+  display: block;
+  border: 10px solid rgba(229, 83, 0);
+  border-radius: 50%;
+  background-color: rgba(70, 76, 86);
+  color: white;
+  font-weight: 600;
+  min-width: 160px;
+  height: 160px;
+  cursor: default;
+  position: absolute;  
+  left:50%;
+  top:50%;
+  transform: translate(-50%, 50%);
+}
+
+.sizeValueTargetBtn, .sizeIdTarget{
+  pointer-events: none;
+}
+
+
+
+#appDiv button:hover, .modal button:hover{
+  background-color: rgba(229, 83, 0);
+}
+
+#appDiv [data-name='International'], .modal [data-name='International']{
+	background-image: url("img/inter.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: black;
+}
+
+[data-name='uk']{
+	background-image: url("img/uk.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+  color: black;
+}
+
+[data-name='us']{
+	background-image: url("img/us.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+  color: black;
+  
+}
+
+[data-name='eu']{
+	background-image: url("img/eu.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+  color: black;
+}
+

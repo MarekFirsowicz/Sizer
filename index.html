@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASOS_Size_Chart</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="sizes.css">
+  
+</head>
+<body>
+<div class='wrapper'>
+
+<header>
+  <img src='img/clipper.png'><h1>Size Chart</h1>
+</header>
+
+<input id="searchbar" onkeyup="searchBrand()" type="text"
+        name="search" placeholder="Search Brand...">
+<button id='searchSwitch'>a...</button>
+<button id='showSwitch'>show</button>
+
+<div id="appDiv"></div>
+
+
+</div>
+
+
+<div class="modalWrap">
+
+  <div class="modal">
+    <div class="topModal"></div>
+    <div id="modalDiv"></div>         
+    <span class="hide">X</span>
+  </div>
+</div>
+
+
+<script src="jssizes.js" defer></script>
+<script src="jsmain12.js" defer></script>
+</body>
+</html>
